@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width:480px){
+    html{
+    font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:480px)
+{
+    html{
+        font-size: 10px;
+    }
+}
+
+#slidershow{
+     clear: both;
+}
+ul,li{
+    list-style: none;
+    color: black;
+}
+
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: table;   
+}
+.clearfix{
+    *zoom 1;
+}
+
+.slider{
+    width: 100%;
+    position: relative;
+    margin: 8% auto 0 auto;
+}
+
+.slider-pic + .slider-pic{
+    opacity: 0;
+}
+
+.slider-pic{
+    width: 100%;
+    position: absolute;
+    background-size: 100%;
+    animation-timing-function: linear;
+    animation-name:sliderfade;
+    animation-iteration-count: infinite;
+}
+
+.focus{
+    position: absolute;
+    z-index: 6;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.focus li{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 9px;
+    background: #fff;
+}
+
+.focus-dot{
+    width: 100%;
+    height: 100%;
+    border-radius:inherit;
+    animation-timing-function: linear;
+    animation-name: sliderfade;
+    animation-iteration-count: infinite;
+}
+
+.focus-dot2,.focus-dot3{
+    opacity: 0;
+}
+.focus ul{
+    margin-left: 48%;
+}
+
+.focus{
+    bottom: 2%;
+}
+
+.focus-dot{
+    background:#ffb638; 
+}
+
+.slider-pic1{
+    background-image: url(../img/Professional_service.jpg)
+}
+
+.slider-pic2{
+    background-image: url(../img/Low_fees_with_high_repay.jpg)
+}
+
+.slider-pic3{
+    background-image: url(../img/Your_life_your_money.jpg)
+}
+
+@keyframes sliderfade{
+    0%{
+        opacity: 0;
+        z-index: 2;
+    }
+    9%{
+        opacity: 1;
+        z-index: 1;
+    }
+    34%{
+        opacity: 1;
+        z-index: 1;
+    }
+    43%{
+        opacity: 0;
+        z-index: 0;
+    }
+    100%{
+        opacity: 0;
+        z-index: 0;
+    }
+}
+.slider-pic,.focus-dot{
+    animation-duration: 12s;
+}
+
+.slider-pic1,.focus-dot1{
+    animation-delay: -1s;
+}
+
+.slider-pic2,.focus-dot2{
+    animation-delay: 3s;
+}
+
+.slider-pic3,.focus-dot3{
+    animation-delay: 7s;
+}
+
+.mainslider, .slider-pic{
+    padding-bottom: 35%;
+}
+
+
+.slider-pic p{
+    position:absolute;
+    font-size: 1.3em;
+    color:ghostwhite;
+    background-color: rgba(89,85,78,0.75);
+    padding:2% 2%;
+}
+
+.slider-pic1 p{
+    margin-top:25%;
+    margin-left:5%;
+}
+
+.slider-pic2 p{
+    margin-top: 20%;
+    margin-left: 70%;
+}
+
+.slider-pic3 p{
+    margin-top: 20%;
+    margin-left: 5%;
+}
+.active{
+    color: #f7ad18;
+}
+.active a{
+    border-bottom: solid 1px #f7ad18;
+}
+#navigation a{
+    text-decoration: none;
+    font-size: 15px;
+    color:inherit;
+}
+
+#navigation a:hover{
+    color: #f7ad18;
+    border-bottom: solid 1px #f7ad18;
+}
+
+@media only screen and (max-width:480px){
+    .slider-pic p{
+        font-size: 1em;
+        padding:1% 1%;
+    }
+}
